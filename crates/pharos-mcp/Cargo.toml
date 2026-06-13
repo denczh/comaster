@@ -1,0 +1,16 @@
+[package]
+name = "pharos-mcp"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "pharos-mcp"
+path = "src/main.rs"
+
+[dependencies]
+pharos             = { workspace = true }
+rmcp               = { workspace = true }
+tokio              = { workspace = true }
+anyhow             = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }

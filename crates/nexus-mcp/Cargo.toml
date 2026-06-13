@@ -1,0 +1,16 @@
+[package]
+name = "nexus-mcp"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "nexus-mcp"
+path = "src/main.rs"
+
+[dependencies]
+nexus              = { workspace = true }
+rmcp               = { workspace = true }
+tokio              = { workspace = true }
+anyhow             = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }

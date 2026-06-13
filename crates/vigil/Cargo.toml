@@ -1,0 +1,10 @@
+[package]
+name = "vigil"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+shared    = { workspace = true }
+thiserror = { workspace = true }
+anyhow    = { workspace = true }
+serde     = { workspace = true }

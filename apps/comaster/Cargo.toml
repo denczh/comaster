@@ -1,0 +1,21 @@
+[package]
+name = "comaster"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+slint              = { workspace = true }
+ui                 = { workspace = true }
+shared             = { workspace = true }
+pharos             = { workspace = true }
+gens               = { workspace = true }
+codex              = { workspace = true }
+nexus              = { workspace = true }
+vigil              = { workspace = true }
+copilot            = { workspace = true }
+anyhow             = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+[build-dependencies]
+slint-build = { workspace = true }

@@ -1,0 +1,12 @@
+[package]
+name = "codex"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+shared    = { workspace = true }
+thiserror = { workspace = true }
+anyhow    = { workspace = true }
+serde     = { workspace = true }
+reqwest   = { workspace = true }
+tokio     = { workspace = true }

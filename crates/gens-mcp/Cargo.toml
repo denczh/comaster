@@ -1,0 +1,16 @@
+[package]
+name = "gens-mcp"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "gens-mcp"
+path = "src/main.rs"
+
+[dependencies]
+gens               = { workspace = true }
+rmcp               = { workspace = true }
+tokio              = { workspace = true }
+anyhow             = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }

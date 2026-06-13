@@ -1,0 +1,61 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/shared",
+    "crates/pharos",
+    "crates/pharos-mcp",
+    "crates/gens",
+    "crates/gens-mcp",
+    "crates/codex",
+    "crates/codex-mcp",
+    "crates/nexus",
+    "crates/nexus-mcp",
+    "crates/vigil",
+    "crates/vigil-mcp",
+    "crates/copilot",
+    "crates/ui",
+    "apps/comaster",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+# Internal crates
+shared  = { path = "crates/shared" }
+pharos  = { path = "crates/pharos" }
+gens    = { path = "crates/gens" }
+codex   = { path = "crates/codex" }
+nexus   = { path = "crates/nexus" }
+vigil   = { path = "crates/vigil" }
+copilot = { path = "crates/copilot" }
+ui      = { path = "crates/ui" }
+
+# UI
+slint       = "1.16.1"
+slint-build = "1.16.1"
+
+# Model Context Protocol SDK
+rmcp = "1.7"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Serialization
+serde      = { version = "1", features = ["derive"] }
+yaml_serde = "0.10"
+
+# Error handling
+anyhow    = "1"
+thiserror = "2"
+
+# HTTP client (used by copilot for Anthropic API and by codex for Foundry)
+reqwest = { version = "0.13", features = ["json"] }
+
+# CLI argument parsing (used by MCP server binaries)
+clap = { version = "4", features = ["derive"] }
+
+# Structured logging
+tracing            = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
